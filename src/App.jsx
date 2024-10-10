@@ -16,10 +16,10 @@ function App() {
     setIsLoading(true);
     try {
       const response = await axios.get(searchApi + query);
-      setRecipes(response.data.meals || []); // handle null if no results
+      setRecipes(response.data.meals || []); 
     } catch (error) {
       console.error("Error fetching the recipes:", error);
-      setRecipes([]); // clear recipes if an error occurs
+      setRecipes([]); 
     }
     setIsLoading(false);
   };
@@ -31,7 +31,7 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    searchRecipes(); // search when form is submitted
+    searchRecipes(); 
   };
 
   return (
